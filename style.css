@@ -1,0 +1,47 @@
+body{
+    font-family: 'Times New Roman', Times, serif; /*This sets the fonts that 
+    browsers will loads the texts.*/
+}
+
+h1{
+    background-color: blueviolet;
+    width: max-content; /*The value 'max-content' allows the element to occupy
+    all space in the box content.*/
+
+    padding: 10px 90px; /*This fills with spaces inside the element.*/
+    margin: 10px; /*This fills with spaces outside the element.*/
+
+    /*The first thing you need to know is that the border creates an edge 
+    inside the element.
+    If you use just the attr 'border: value;', you can use many dif values -
+    color, style, and width (idk if you can apply more dif values). But this
+    is very simple, and i believe that is better for a project to use specifics
+    attrs - like these below. I hope thus the maintenance will be better.*/
+
+    border-radius: 10px; /*This rounds the edge(border)*/
+    border-style: inset; /*this stylizes the border*/
+    border-color: gray; /*This sets the color of the border*/
+    border-width: 5px; /*This sets the border thickness.*/
+}
+
+h1:hover{
+    border-style: outset;
+}
+
+h2{
+    width: fit-content; /*The value 'fit-content' restricts the element to occupy
+    just the necessary space to displays the content in the box content. 
+    It's the opposite of his brother 'max-content'*/
+
+    background-color: cadetblue;
+    margin: 10px; 
+    padding: 10px 90px; 
+
+    /*So, the attr outline, unlike of your brother 'border', sets an edge(border)
+    outside the element. 
+    The outline is an problematic attr, 'cause its dont respect the father element, i guess.
+    So, my consel is: Avoid to use outline!*/
+    outline-width: 10px 20px;
+    outline-style: inset;
+    outline-offset: 1px; /*This sets the distance between the content and the outline.*/
+}
