@@ -1,3 +1,3 @@
 # CSS-learn
 
-Now, Davi is learning about CSS, because he dreams to be a full-stack developer
+Now, i'm learning about CSS, because i dream to be a great full-stack developer.
