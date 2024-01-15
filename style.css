@@ -41,7 +41,22 @@ h2{
     outside the element. 
     The outline is an problematic attr, 'cause its dont respect the father element, i guess.
     So, my consel is: Avoid to use outline!*/
-    outline-width: 10px 20px;
+    
+    outline-width: 100px 200px;
     outline-style: inset;
-    outline-offset: 1px; /*This sets the distance between the content and the outline.*/
+    outline-offset: 100px; /*This sets the distance between the content and the outline.*/
+}
+
+.h1-boxado{
+    /*Listen, by default, the box content expands according to the quantity of content that an 
+    element contains, it means that the content is the limit. In other words, if you set a width
+    with 450px of limit, but you set 25px of padding and border, the size of the padding and border
+    will add to the width more 50px and the final sum will be 500px of box size in the width. But 
+    of course in the life will have situations that is not interesting that it occurs. 
+    In CSS exists many ways to solve this problem. One of them is the box-sizing.*/
+
+    box-sizing: border-box; /*The border-box value resricts the size of the element, making the 
+    content adapts to the width. It means that the total size of the element is calculated including 
+    padding and border. This means that if you add padding or a border to an element, it will not 
+    increase its total size, but rather adjust the size of the content.  */
 }
