@@ -3,7 +3,7 @@ body{
     browsers will loads the texts.*/
 }
 
-h1{
+.h1{
     background-color: blueviolet;
     width: max-content; /*The value 'max-content' allows the element to occupy
     all space in the box content.*/
@@ -24,11 +24,11 @@ h1{
     border-width: 5px; /*This sets the border thickness.*/
 }
 
-h1:hover{
+.h1:hover{
     border-style: outset;
 }
 
-h2{
+.h2{
     width: fit-content; /*The value 'fit-content' restricts the element to occupy
     just the necessary space to displays the content in the box content. 
     It's the opposite of his brother 'max-content'*/
@@ -60,3 +60,73 @@ h2{
     padding and border. This means that if you add padding or a border to an element, it will not 
     increase its total size, but rather adjust the size of the content.  */
 }
+
+/*Bro, listen: In CSS we have elements that are represented as a block. All blocks gerenerates a line-
+break - <p>, <h1>, <ul> <li>, and so farth. These elementes recieves the box-model attrs, like padding 
+and height. So, yes, probably you thinking the same thing that i'm thinking; the CSS haves elements 
+that are not represented as a block; these elements are called as inline elements, because they can 
+format a portion of texts in the block elements. They are: <em>, <strong>, <a> and so on. And they 
+don't generates linebreaks and of course don't behaves as block, because they don't recives the box-
+model attrs. Also, they just takes the width that is necessary to displays the content(it's like fit-
+content), unlike block elements that takes all width inherited by your father element. although, CSS 
+is a beautiful world. And you can change who is a block and who is an inline element. So, how? 
+Behold the property display to do this!*/
+
+.h1-inline {
+    display: inline; /*By default the tag h1 is displayed as a block, not inline.*/
+}
+
+/*The tag <a>, for being a link, has a "clickable area". The padding can increase this "clickable 
+area", so looks at this below:*/
+
+.a-increased{
+    padding: 100px;
+    /*It's crazy how this happens. Because the padding can fill the sides, but not the height, however
+    the "clickable area" was increased in the height too. But avoid to use this class.*/
+}
+
+/*
+The display property in CSS determines how an HTML element should be displayed on the page. It can 
+take various values, each affecting the layout and behavior of the element differently. Here's a brief 
+overview of some common values for the display property:
+
+    block:
+        - The element generates a block-level container.
+        - It starts on a new line and takes up the full width available.
+        - Example: <div>, <p>, <h1>.
+
+    inline:
+        - The element generates an inline-level container.
+        - It does not start on a new line and only takes up as much width as necessary.
+        - Example: <span>, <a>, <strong>.
+
+    inline-block:
+        - Similar to inline, but the element can have a width and height, and it behaves as a block-
+        level element regarding box model.
+        - It does not start on a new line.
+        - Example: Often used when you want inline elements to have block-level properties.
+
+    none:
+        - The element is not displayed.
+        - The space it would have occupied is collapsed.
+        - It's as if the element doesn't exist in the layout.
+        - Example: Useful for hiding elements dynamically with JavaScript.
+
+    table:
+        - The element behaves like a table element (e.g., <table>).
+        - It will behave like a block-level element but will also define a table structure.
+        - Example: <table>, <thead>, <tbody>.
+
+    flex:
+        - The element becomes a flexible container, and child elements become flexible items inside it.
+        - It enables the use of the flexbox layout model for the container and its children.
+        - Example: Used for creating flexible, responsive layouts.
+
+    grid:
+        - The element becomes a grid container, and child elements become grid items inside it.
+        - It enables the use of the grid layout model for the container and its children.
+        - Example: Used for creating grid-based layouts.
+
+    inline-flex and inline-grid:
+        - Similar to flex and grid, respectively, but the container is an inline-level container.
+*/
