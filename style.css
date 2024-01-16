@@ -1,9 +1,21 @@
+/*Basically, the CSS style your HTML tags. 
+By default the tags already have a style, so, the CSS serves to change this standart style for any 
+other style that you want.*/
+
+/*You can style the tags directly.*/
 body{
     font-family: 'Times New Roman', Times, serif; /*This sets the fonts that 
     browsers will loads the texts.*/
 }
 
-.h1{
+/*
+In CSS you can aplly styles for an especific element, not just tags. This way of applying styles is 
+called 'class'. In this way you can add the CSS properties that you set in your CSS file for a purpose
+or more. Therefore you can set a name for this class, and you can set properties that you want to 
+make.  
+*/
+
+.styled-h1{ /*This is a class*/
     background-color: blueviolet;
     width: max-content; /*The value 'max-content' allows the element to occupy
     all space in the box content.*/
@@ -23,6 +35,41 @@ body{
     border-color: gray; /*This sets the color of the border*/
     border-width: 5px; /*This sets the border thickness.*/
 }
+
+/*This thing below is a pseudo-class, and allow you to change the CSS properties that you want to 
+aplly in an element when some events happens on the element. It's as a special state of the element
+
+Pseudo-classes are used to style elements based on their current state or position, such as when an 
+element is being hovered over, clicked, or the first child of its parent. Pseudo-classes are denoted 
+by a colon (:) followed by the name of the pseudo-class. Here are some examples:
+
+    :hover - selects and styles an element when the user hovers over it:
+
+        a:hover {
+        color: red;
+        }
+
+    :active - selects and styles an element while it is being activated (clicked):
+
+        button:active {
+        background-color: #00ff00;
+        }
+
+    :first-child - selects and styles the first child element of a parent:
+
+        li:first-child {
+        font-weight: bold;
+        }
+
+    :nth-child(n) - selects and styles the nth child element of a parent.
+
+        p:nth-child(2) {
+        color: blue;
+        }
+
+These are just a few examples, and there are many more pseudo-classes available in CSS. They provide a 
+way to apply styles based on various conditions, enhancing the flexibility and control over the 
+appearance of web pages. */
 
 .h1:hover{
     border-style: outset;
