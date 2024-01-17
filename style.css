@@ -6,6 +6,7 @@ other style that you want.*/
 body{
     font-family: 'Times New Roman', Times, serif; /*This sets the fonts that 
     browsers will loads the texts.*/
+    margin: 10px 30px; /*This fills with spaces outside the element.*/
 }
 
 /*
@@ -21,7 +22,8 @@ make.
     all space in the box content.*/
 
     padding: 10px 90px; /*This fills with spaces inside the element.*/
-    margin: 10px; /*This fills with spaces outside the element.*/
+    margin: auto; 
+    margin-bottom: 0px;
 
     /*The first thing you need to know is that the border creates an edge 
     inside the element.
@@ -34,6 +36,7 @@ make.
     border-style: inset; /*this stylizes the border*/
     border-color: gray; /*This sets the color of the border*/
     border-width: 5px; /*This sets the border thickness.*/
+    
 }
 
 /*This thing below is a pseudo-class, and allow you to change the CSS properties that you want to 
@@ -71,7 +74,7 @@ These are just a few examples, and there are many more pseudo-classes available 
 way to apply styles based on various conditions, enhancing the flexibility and control over the 
 appearance of web pages. */
 
-.h1:hover{
+.styled-h1:hover{
     border-style: outset;
 }
 
@@ -177,3 +180,13 @@ overview of some common values for the display property:
     inline-flex and inline-grid:
         - Similar to flex and grid, respectively, but the container is an inline-level container.
 */
+.bordera {
+    padding: 5px;
+    color:rgb(1, 1, 122);
+    background-color: darkgray;
+    border-bottom: 2px solid blue;
+}
+
+.grafite{
+    color: rgb(48, 48, 48);
+}
