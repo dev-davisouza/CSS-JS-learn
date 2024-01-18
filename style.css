@@ -190,3 +190,35 @@ overview of some common values for the display property:
 .grafite{
     color: rgb(48, 48, 48);
 }
+
+.navbar {
+    box-sizing: content-box;
+    margin: 1rem 0rem;
+    background-color: #F8F9FA;
+    padding: 0px;
+    border: 1px solid #DEE2E6;
+    display: flex; /* Add a flexible model to the parent element*/
+    justify-content: center; /* Center it child horizontally */
+    align-items: center; /* Center it child vertically */
+}
+
+.navbar-list{
+    padding: 0;
+    margin: 0;
+    color: black;
+    list-style: none;
+}
+
+.navbar-item{
+    display: inline-block;
+    margin: 2px;
+    width: fit-content;
+    padding: 5px 12px;
+}
+
+.navbar-item:hover{
+    background-color: black;
+    color: white;
+    transition: background-color 0.5s ease, color 0.5s ease, transform 0.5s ease;
+    
+}
