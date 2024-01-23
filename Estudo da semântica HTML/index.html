@@ -9,8 +9,63 @@
 </head>
 
 <body>
-    <header class="header">
-        <nav>
+
+    <!--
+        If you're developing your front-end project you have to know that by using semantic elements 
+        in HTML is important for several reasons, as it helps improve the structure, accessibility, 
+        and maintainability of your web pages. Here are some key reasons why you should use semantic 
+        elements in HTML:
+
+        1. Improved Accessibility:
+            Semantic elements provide meaning to the content they enclose, making it easier for 
+            assistive technologies (such as screen readers) to interpret and convey the information to 
+            users with disabilities. This ensures a better user experience for all visitors, including 
+            those who rely on assistive technologies.
+
+        2. Better SEO:
+            Search engines use semantic HTML to understand the structure and context of your content. 
+            By using semantic elements, you can provide more accurate information about the content on 
+            your page, which can positively impact your search engine rankings.
+
+        3. Code Readability and Maintenance:
+            Semantic HTML helps to create a clearer and more readable code structure. When you use 
+            elements like <header>, <nav>, <article>, <section>, and <footer>, it becomes easier for 
+            developers (including yourself and others who may work on the project) to understand the 
+            purpose of different sections of your code. This, in turn, makes maintenance and updates 
+            more straightforward.
+
+        4. Consistency and Standardization:
+            Semantic elements contribute to a standardized and consistent structure across different 
+            web pages. This makes it easier for developers to collaborate and for tools and frameworks 
+            to work more efficiently with your code.
+
+        5. Enhanced Styling and Presentation:
+            CSS and JavaScript frameworks often utilize semantic HTML to apply styling and behavior. 
+            Semantic elements provide hooks for styling specific sections of your content, making it 
+            easier to create visually appealing and responsive designs.
+
+        6. Future-Proofing:
+            Semantic HTML is designed to describe the meaning of content rather than just its 
+            presentation. This approach makes your content more resilient to changes and updates, 
+            ensuring that it remains relevant and functional as web technologies evolve.
+
+        Here are some examples of semantic HTML elements and their purposes:
+
+            <header>: Represents a group of introductory or navigational aids.
+            <nav>: Represents a navigation menu.
+            <main>: Represents the main content of the document.
+            <article>: Represents a self-contained piece of content that could be distributed and 
+                       reused independently.
+            <section>: Represents a generic section of content.
+            <aside>: Represents content that is tangentially related to the content around it.
+            <footer>: Represents a footer for a section or a page.
+
+        By incorporating these semantic elements appropriately, you contribute to a more accessible, 
+        readable, and maintainable web presence.
+    -->
+
+    <header class="header"> <!--Represents a group of introductory or navigational aids.-->
+        <nav> <!--Represents a navigation menu.-->
             <ul>
                 <li><a href="">This</a></li>
                 <li><a href="">That</a></li>
@@ -23,21 +78,29 @@
         </div>
     </header>
 
-    <main class="main-content">
+    <main class="main-content"> <!--Represents the main content of the document.-->
         <div class="container">
-            <section class="main-section">
+            <section class="main-section"> <!--Represents a generic section of content.-->
                 <article>
+                    <!--Represents a self-contained piece of content that could be distributed and reused independently.-->
                     <header>
                         <h2>The HTML</h2>
                     </header>
                     <p>The HTML is so sweet. I love it!</p>
                     <a href="">Know more</a>
                 </article>
+                <article>
+                    <header>
+                        <h2>The CSS</h2>
+                    </header>
+                    <p>The CSS is so sweet. I love it!</p>
+                    <button type="button"><a href="">Know more</a></button>
+                </article>
             </section>
         </div>
     </main>
-    <footer>
-        Copyright ® 2024
+    <footer class="footer"> <!--Represents a footer for a section or a page.-->
+        Copyright &copy; 2024
     </footer>
 </body>
 
