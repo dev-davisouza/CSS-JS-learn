@@ -44,6 +44,7 @@ body{
     color: black;
     background-color: rgba(255, 255, 255, 0.7);
     transform: scale(1.05); /*Obviously, transform the element*/
+    border-color: rgba(255, 255, 255, 0.7);
 }
 
 .header nav ul {
