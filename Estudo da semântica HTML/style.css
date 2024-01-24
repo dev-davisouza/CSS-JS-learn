@@ -25,7 +25,7 @@ body{
 
 .header-content h1{
     font-size: 56px;
-    text-shadow: 2px 2px 5px white; /*This creates a shadpw around it.*/
+    text-shadow: 2px 2px 5px white; /*This creates a shadow around it.*/
     text-transform: uppercase; 
 }
 
