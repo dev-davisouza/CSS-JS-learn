@@ -1,0 +1,42 @@
+/*What is flexbox? Flexbox, or the Flexible Box Layout, is a layout model in CSS that allows you to 
+design complex layouts more efficiently and with less code than traditional models. Getting straight to 
+the point, when you aplly the value flex to the CSS property display in a div.container by example its 
+children will be a flex-items. But the children of the flex-items will not be flex-items too. */
+
+
+/* Default box demonstration */
+.normalbox {
+    height: 250px;
+    border: 3px solid red;
+    margin-bottom: 16px;
+}
+
+.normalbox div {
+    border: 2px solid orange;
+    width: 300px;
+    margin: 15px;
+}
+
+/* flexbox demonstration */
+.flexbox {
+    height: 250px;
+    border: 3px solid red;
+    display: flex;
+    margin-bottom: 16px;
+    /*flex-wrap: wrap; The elements of the container can broke the line*/
+
+    /*Bro listen, In the Flexbox layout, the items align in rows (the same of default flow of the document), 
+    but as you can see they occuppy all height available. The point is - i can organize the items not only as 
+    a row, but as a column*/
+    flex-direction: column;
+
+}
+
+.flexbox div {
+    border: 2px solid orange;
+    /*As you can see in the flexbox i just can change the width occuped by an element if it fits in it 
+    container (when the flex-direction is row), so, if you try to set the div width as 7000px, it will respect 
+    his parent, but bro, it's larger than practically all monitors in this world!*/
+    width: fit;
+    margin: 15px;
+}
