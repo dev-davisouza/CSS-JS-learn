@@ -13,7 +13,6 @@ children will be a flex-items. But the children of the flex-items will not be fl
 
 .normalbox div {
     border: 2px solid orange;
-    width: auto;
     margin: 15px;
 }
 
