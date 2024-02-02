@@ -65,12 +65,12 @@ body {
 }
 
 .list-item-actions{
-   display: none;
-}
-
-.list-item:hover .list-item-actions{
     display: flex;
     gap: 16px;
     align-items: center;
-    opacity: 30%;
+    opacity: 0%;
+}
+
+.list-item:hover .list-item-actions{
+   opacity: 30%;
 }
