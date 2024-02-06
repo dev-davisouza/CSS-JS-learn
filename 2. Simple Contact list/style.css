@@ -80,7 +80,6 @@ body {
 }
 
 .list-item-actions{
-    background-color: yellow;
     display: flex;
     gap: 16px; /* The gap property is useful to set spacing between flex-items along the main-axis*/
     align-items: center;

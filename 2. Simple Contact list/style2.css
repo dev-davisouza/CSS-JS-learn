@@ -1,0 +1,60 @@
+html, body{
+    height: 100%;
+    /*
+    So, why i setted the height as 100%? 
+    Probably you saw the doc in the html (see the 'index.html'), and there you may read that this project was
+    designed with display flex. Then, why the height was setted as 100% if it is flex? Because if i hadn't done
+    this the height would adjust to the height of the content, and i don't want it, because my wish is that the
+    container centralize horizontal and vertically in the page. You can test it just removing the height.
+    */
+}
+
+body {
+    background-color: aqua;
+    margin: 0;
+    padding: 0;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    display: flex;
+    justify-content: center; /* Align the content along the main axis. */
+    align-items: center;  /* Align the content along the cross axis. */
+    flex-direction: column; /*The container will don't ocuppy the same row (like a line), but the same column.
+    However you have to know that the content inside it (children elements) will not inherit this property. */
+}
+
+.main-title {
+    color: #385555;
+}
+
+.list{
+    width: 90%;
+    max-width: 960px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    list-style-type: none;
+    gap: 16px;
+
+}
+
+.list-item{
+    flex-basis: 280px;
+    background-color: white;
+    text-align: center;
+    border-radius: 5px;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, .2);
+    background-image: url(img/thumbs/thumb02.jpg);
+    background-repeat: no-repeat;
+}
+
+.list-item-image img{
+    margin-top: 120px;
+    border-radius: 50%;
+}
+
+.list-item-actions{
+    display: flex;
+    justify-content: center;
+    gap: 16px;
+    padding: 10px;
+    background-color: #ccc;
+}
