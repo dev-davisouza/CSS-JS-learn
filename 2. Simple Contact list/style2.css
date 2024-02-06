@@ -1,14 +1,3 @@
-html, body{
-    height: 100%;
-    /*
-    So, why i setted the height as 100%? 
-    Probably you saw the doc in the html (see the 'index.html'), and there you may read that this project was
-    designed with display flex. Then, why the height was setted as 100% if it is flex? Because if i hadn't done
-    this the height would adjust to the height of the content, and i don't want it, because my wish is that the
-    container centralize horizontal and vertically in the page. You can test it just removing the height.
-    */
-}
-
 body {
     background-color: aqua;
     margin: 0;
