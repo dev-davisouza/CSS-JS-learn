@@ -15,8 +15,8 @@ body {
     padding: 0;
     font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
     display: flex;
-    justify-content: center; /* Align the content horizontally. */
-    align-items: center;  /* Align the content vertically. */
+    justify-content: center; /* Align the content along the main axis. */
+    align-items: center;  /* Align the content along the cross axis. */
     flex-direction: column; /*The container will don't ocuppy the same row (like a line), but the same column.
     However you have to know that the content inside it (children elements) will not inherit this property. */
 }
@@ -31,14 +31,13 @@ body {
     width: 90%;
     max-width: 500px;
     max-height: 400px;
-    overflow-y: auto; /* <--- Now we need to stop and think about the main-axis and cross-axis, but what's the
-    definition of these terms? The main-axis in a normal and flex display it's like an imaginary horizontally  
+    overflow-y: auto; /* <--- Now we need to stop and think about the main axis and cross axis, but what's the
+    definition of these terms? The main axis in a normal and flex display it's like an imaginary horizontally  
     line. For being the 'main-axis' the flow of the document follow in line or rows, then when you put a 
     paragraph, title (h1 by example) or a list, you've probably already noticed that the content follow 
-    horizontally; this is the 'main-axis'. The cross-axis, unlike the main-axis displays the content vertically
-    (by default). So, what's my purpose here? It's just control the height of the content displayed by the 
-    content. Instead of loading the content all at once, i prefer that the user scrolls the content as it 
-    wants.*/
+    horizontally; this is the main axis. The cross axis, unlike the main axis displays the content vertically
+    (by default). So, what's my purpose here? It's just control the height displayed by the content. Instead 
+    of loading the content all at once, i prefer that the user scrolls the content as it wants.*/
 
     box-shadow: 0 2px 6px rgba(0, 0, 0, .2);
 }
