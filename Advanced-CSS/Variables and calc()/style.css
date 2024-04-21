@@ -71,3 +71,36 @@ variable.
     font-size: 2rem;
     background-color: var(--main-color)
 }
+
+/*From now on I can make an ellipse!👍🏿*/
+.black-ellipse {
+    background-color: black;
+    max-width: 50%;
+    min-height: 20rem;
+    color: white;
+    border-radius: 100%/100%;
+    text-align: center;
+}
+
+/*
+Now (21-04-2024) we'll be working with box-shadow, it is little bit hard to understand, but is
+possible!
+
+The property 'box-shadow' in CSS receives a set of values which defines the style of the shadow
+applied to an element. The allow values are:
+
+    1. offset-x: It sets the horizontal displacement of the shadow. A positive number moves the 
+       shadow to the right, while o negative number move it to the left.
+    2. offset-y: It sets the vertical displacement of the shadow. A positive number moves the
+       shadow to the bottom, while a negative number move it to top.
+    3. blur-radius: It set the blur of the shadow. How bigger the value, more diffuse will be the
+       shadow. A value 0 means that the shadow will have sharp edges(border).
+    4. spread-radius: It set the extension or contracting of the shadow. A positive number increases
+       the size of the shadow, while a negative number reduce it.
+    5. color: It set the color of the shadow. It can be specified with any CSS valid color format,
+       like color name, hexadecimal code, RGB, RGBA, HSL or HSLA.
+       */ 
+
+.white-shadow {
+    box-shadow: ;
+}
