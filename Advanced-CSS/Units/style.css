@@ -1,0 +1,74 @@
+/*
+Until now i have (i've) been using the unit 'px'(pixels), but we have some problems with the pixel.
+Of course is more easy to understand, especially for the beginners in CSS like me. The main problem
+with pixel is that it's behavior can be categorized as hard code, because in the moment that i set 
+the font-size of any class or element with pixel you can't change it unless the style.css is changed.
+
+Pixels (px) provide a fixed value that does not scale well across different devices and screen sizes.
+When you set a dimension in pixels, they remain static and do not adjust based on factors like screen
+resolution or user prefereces.
+
+On the other hand, relative units like 'em' and 'rem' are more flexible. They are based on the font size
+of the parent element or the root element (html tag), respectively. This means that when you set 
+dimensions or font sizes using 'em' or 'rem', they adapt more dynamically to changes in the browser or 
+user preferences, making your layout more responsive.
+
+In summary, pixels are not good to create responsive designs. 
+*/
+
+html {
+    font-size: 62.5%;
+}
+
+h1 {
+    font-size: 5rem;
+}
+
+h2 {
+    font-size: 5em;
+}
+
+.reduced {
+    font-size: 50%;
+}
+
+.half-container {
+    width: 50%;
+    margin: 0 auto;
+}
+
+.padding-porcent {
+    background-color: aquamarine;
+    padding: 50%;
+}
+
+/*
+Outside of the font size definition context, the unit 'em' refer to relative size in relation to the 
+font size of the nearest parent element.
+
+For example, if you set 'width: 2em;' in one element '<div>', it means the width of this <div> will be 
+twice times bigger than font size of it nearest parent element. 
+*/
+
+.gray-background { 
+    background-color: gray;
+}
+
+.full-vh {
+    height: 100vh;
+}
+
+.full-vw {
+    width: 100vw;
+}
+
+/*
+Now i'm working with vw (viewport width) and vh (viewport height) units. These units are very 
+interesting, 'cause they are particularly useful for creating layouts that adapt to different screen 
+sizes and orientations. They allow you to specify dimensions based directly on the size of the viewport, 
+making your designs more responsive across various devices.
+
+These units are not independent, if the parent element has a class that limit the width or/and height,
+they will respect its parent. But if its parent does not control the height, width or margin, vw & vh
+will occupy all viewport of the screen if setted as 100. That's crazy!
+*/

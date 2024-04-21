@@ -1,0 +1,73 @@
+/*
+The concept of variables in CSS is the same as in any other language, it's a statement that sets
+an address in the RAM. Once declared, it can be used in the document. Today (20/04/2024) I will
+work with variables and the function calc() (It is not the first time I've worked with these 
+things neither in CSS nor in any other language). Then, let's start it!
+
+In CSS i cant set vars (variables) outside a selector, so, by default, is recommended for the
+developers to set them inside of the :root pseudo-class insted of directly html tag, despite
+being the parent of the parent of all tags!
+
+In CSS, both :root and the html tag can be used to define CSS variables. However, :root is 
+typically preferred for a few reasons:
+
+    1. Specificity: The :root pseudo-class has higher specificity compared to the html selector. 
+       This means that styles defined within :root will override styles defined in other parts of 
+       the CSS more easily, providing better control and flexibility.
+
+    2. Convention: Using :root has become a convention in modern CSS development. It signifies that 
+       the variables defined within :root are intended to be global and accessible throughout the 
+       entire document.
+
+    3. Clarity: Using :root makes it clear that you're defining global variables for the entire 
+       document, whereas styling the html tag might be confused with styling the HTML structure itself.
+
+Overall, while both methods technically work, using :root is considered best practice for defining 
+global CSS variables in modern web development
+*/
+
+:root {
+/*Set the variables :D*/
+    --header-height: 10rem;
+    --main-color: rgba(255, 0, 0, .8);
+}
+
+html {
+    font-size: 62.5%;
+}
+
+html,
+body {
+    margin: 0;
+    padding: 0;
+}
+
+.fixed-header-demo {
+    width: 100%;
+    background-color: var(--main-color);
+    height: var(--header-height);
+    font-size: 2rem;
+    position: fixed;
+    top: 0;
+}
+
+.full-vh-main {
+    min-height: calc(100vh - var(--header-height));
+    background-color: #ccc;
+    font-size: 2rem;
+    margin-top: var(--header-height);
+}
+
+/*
+Note that when i use vars istead of hard values, i don't need to change all code manually.
+With vars i just need to change it value in the root, and automatically all this will be
+reflected in the entire code whose use the var, like the class full-vh-main, which handle
+the height of the header with position fixed, 'cause subtract the full vh with the --header-height
+variable.
+*/
+
+.simple-footer {
+    height: 10rem;
+    font-size: 2rem;
+    background-color: var(--main-color)
+}

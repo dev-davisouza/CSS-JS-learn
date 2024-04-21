@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Unit of measurement</title>
+</head>
+<body>
+    <h1>I'm using 1 rem</h1>
+    <h2>I'm using 1 em</h2>
+    <div class="reduced">
+        <h1>I'm using 1 rem</h1>
+        <h2>I'm using 1 em</h2>
+    </div>
+
+    <div class="half-container">
+        <p class="padding-porcent">Why my padding is calculated based on the width of my parent element?</p>
+        <div class="full-vh full vw gray-background">
+            <p>I'm the law!</p>
+        </div>
+    </div>
+
+    <!--
+        Note, 'rem' still keep your size, it just subdued only by the root (html tag).
+        In contrast 'em' is subdued by his parent, in this case, reduced class.
+    -->
+
+    <div class="full-vh full vw gray-background">
+        <p>I'm the law!</p>
+    </div>
+</body>
+</html>
