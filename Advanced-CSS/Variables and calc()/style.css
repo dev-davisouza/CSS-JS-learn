@@ -83,24 +83,87 @@ variable.
 }
 
 /*
-Now (21-04-2024) we'll be working with box-shadow, it is little bit hard to understand, but is
+Now (21-04-2024 at 9:24) we'll be working with box-shadow, it is little bit hard to understand, but is
 possible!
 
 The property 'box-shadow' in CSS receives a set of values which defines the style of the shadow
 applied to an element. The allow values are:
 
-    1. offset-x: It sets the horizontal displacement of the shadow. A positive number moves the 
+   1. offset-x: It sets the horizontal displacement of the shadow. A positive number moves the 
        shadow to the right, while o negative number move it to the left.
-    2. offset-y: It sets the vertical displacement of the shadow. A positive number moves the
+   2. offset-y: It sets the vertical displacement of the shadow. A positive number moves the
        shadow to the bottom, while a negative number move it to top.
-    3. blur-radius: It set the blur of the shadow. How bigger the value, more diffuse will be the
+   3. blur-radius: It set the blur of the shadow. How bigger the value, more diffuse will be the
        shadow. A value 0 means that the shadow will have sharp edges(border).
-    4. spread-radius: It set the extension or contracting of the shadow. A positive number increases
+   4. spread-radius: It set the extension or contracting of the shadow. A positive number increases
        the size of the shadow, while a negative number reduce it.
-    5. color: It set the color of the shadow. It can be specified with any CSS valid color format,
+   5. color: It set the color of the shadow. It can be specified with any CSS valid color format,
        like color name, hexadecimal code, RGB, RGBA, HSL or HSLA.
-       */ 
+
+You can set more than one shadow in this property.
+*/ 
 
 .white-shadow {
-    box-shadow: ;
+    box-shadow: 10px 10px white, -10px -10px white;
 }
+
+/*
+Now (21-04-2024 at 15:49) we'll be working with text-shadow. As i already understood the box-shadow,
+it will be very easy to understand, i guess...🥶
+
+The property 'text-shadow' in CSS receives a set of values which defines the style of the shadow
+applied to a text. The allow values are:
+
+   1. offset-x: It sets the horizontal displacement of the shadow. A positive number moves the 
+       shadow to the right, while o negative number move it to the left.
+   2. offset-y: It sets the vertical displacement of the shadow. A positive number moves the
+       shadow to the bottom, while a negative number move it to top.
+   3. blur-radius: It set the blur of the shadow. How bigger the value, more diffuse will be the
+       shadow. A value 0 means that the shadow will have sharp edges(border).
+   4. color: It set the color of the shadow. It can be specified with any CSS valid color format,
+       like color name, hexadecimal code, RGB, RGBA, HSL or HSLA.
+
+You can set more than one shadow in this property.
+*/ 
+
+h1 {
+    text-shadow: -1px 1px 0 rgba(0, 0, 0, .9),
+                -2px 2px 0 rgba(0, 0, 0, .7),
+                -3px 3px 0 rgba(0, 0, 0, .5),
+                -4px 4px 0 rgba(0, 0, 0, .3),
+                -5px 5px 0 rgba(0, 0, 0, .1);
+}
+
+/*
+In 22-04-2024 at 19:53 was started the study in details of the property named 'transition'.
+Getting straight to the point, the transition can be used to configure some animation in order
+to soften the transition between property of one element. See the example below:
+*/
+.grow-up-transition {
+   transition: all 0.5s ease-in-out;
+}
+
+.grow-up-transition:hover {
+   transform: scale(1.02);
+}
+
+/*
+This example above show how transition works in practice. This property can receive these values:
+
+   1. transition-property: These are the CSS properties which must be transitioned. They are 
+       specified separated by comma:
+
+       .element {
+         transition: width 0.5s ease-in-out 0.2s, color 0.3s linear;
+         }
+
+       In the example firt example above (line 142), i just used the 'all' value, this value 
+       don't especify any property, instead, it applies transition to all elements that may change.
+   2. transition-duration: It is the time which the transition should take to be completed.
+       It can be especified in seconds(s) or milliseconds(ms). By example: '0.5s' or '500ms'.
+   3. transition-timing-function: It sets the transition timing curve, controlling how the
+       transition progresses over time. There are several predefined functions, such as
+       'linear', 'ease', 'ease-in', 'ease-out', 'ease-in-out', among others. You can also 
+       make your own timing functions using the function 'cubic-bezier()'. See the link:
+       https://cubic-bezier.com/ for more info!
+*/

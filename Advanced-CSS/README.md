@@ -4,5 +4,6 @@
 - Variables;
 - Function calc();
 - Ellipses with border-radius;
-- box-shadow property in details;
+- box and text shadow property in details;
+- transition property in details;
 - Specificity concept;
