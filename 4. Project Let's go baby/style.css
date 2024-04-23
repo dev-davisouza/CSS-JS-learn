@@ -1,0 +1,145 @@
+@import url('https://fonts.googleapis.com/css2?family=Viaoda+Libre&display=swap');
+
+@font-face {
+    font-family: 'Viaoda Libre';
+    font-style: normal;
+    font-weight: 400;
+    src: url('https://fonts.googleapis.com/css2?family=Viaoda+Libre&display=swap');
+}
+
+:root {
+    --main-header-color: #162028;
+    --main-header-height: 6.25rem;
+    --menu-text-color: #425564;
+    --text-color: #555;
+    --back-box-image: #003d52;
+    --main-footer-color: #0b171f;
+    --main-footer-height: 70px;
+    --main-footer-text-color: #6f8597;
+    --main-font: 'Viaoda Libre', serif;
+}
+
+a {
+    all: unset;
+    cursor: pointer;
+    text-decoration: none;
+    color: inherit;
+}
+
+html,
+body {
+    margin: 0;
+    padding: 0;
+}
+
+.main-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: var(--main-header-color);
+    height: var(--main-header-height);
+    font-family: var(--main-font);
+}
+
+.main-header ul {
+    display: flex;
+    list-style-type: none;
+    color: var(--menu-text-color);
+    padding: 1rem;
+    text-transform: uppercase;
+    gap: 2rem;
+    font-size: 1.25rem;
+}
+
+.main-header ul li {
+    transition: color 0.3s ease-in-out;
+}
+
+.main-header ul li:hover {
+    color: white;
+}
+
+.main-header-logo {
+    font-size: 2.625rem;
+    margin: 0 0 0 6.25rem;
+    padding: 1rem;
+    color: white;
+    text-transform: uppercase;
+}
+
+.main-img img {
+    width: 100vw;
+    height: 100vh;
+}
+
+.main-content {
+    text-align: center;
+}
+
+.main-content-people {
+    margin: 2rem auto 0;
+    width: 70vw;
+    height: 100vh;
+}
+
+.main-content-people-title {
+    font-weight: 300;
+    font-size: 2rem;
+    font-family: var(--main-font);
+}
+
+.main-content-people-presentation {
+    font-size: 1rem;
+    font-weight: 100;
+    color: var(--text-color);
+    line-height: 1.5;
+    margin-bottom: 2rem;
+}
+
+.main-content-people-list-container {
+    display: flex;
+    list-style-type: none;
+    justify-content: space-evenly;
+}
+
+.person-name {
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    margin-bottom: 0.5rem;
+}
+
+.person-description {
+    color: var(--text-color);
+}
+
+.main-content-details {
+    height: 100vh;
+    background-image: url(img/bg.svg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    color: white;
+    font-family: var(--main-font);
+    padding: 4rem 3rem;
+
+}
+
+.main-content-details-title {
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    width: 100%;
+    text-align: left;
+    font-size: 4rem;
+    font-weight: 200;
+}
+
+.main-content-details-presentation {
+    font-size: 2rem;
+    max-width: 90%;
+} 
+
+.main-footer {
+    background-color: var(--main-footer-color);
+    padding: calc(var(--main-footer-height) / 2);
+    text-align: center;
+    color: var(--main-footer-text-color);
+}
