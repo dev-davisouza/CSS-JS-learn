@@ -1,0 +1,1 @@
+Bro, listen. In this directory named ['refactor'](../refactor/) i refactored the first code available in the first level of the ['5. Aprenser'](/5.%20Aprenser/) directory. The reason by this is because i wanted to simplify the first css. I hope I achieved this goal!

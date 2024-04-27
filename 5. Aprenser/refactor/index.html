@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!--
+        Hello everyone! At 21:06 of 26-04-2024 i started the refactororing of the code of the fifth 
+        project named '5. Aprenser'. Now i will try to "dry" the HTML-CSS aplied in the first code 
+        (1 level above).
+
+        Initially i started adding the header, main and footer tags with the aim to define the semantic 
+        separation of the content.
+
+        In the header i will not work with nav tag, even though it is semantically correct, but in this
+        case i just want to simplify the code, 'cause inside of the nav i will just have the ul & it 
+        children, not anymore.
+    -->
+    <div class="dark-gray-container">
+        <header class="main-header">
+            <img class="main-header-logo " src="../img/logoAprenser.png" alt="">
+            <ul class="main-header-nav">
+                <li><a href="#courses">Courses</a></li>
+                <li><a href="#school">Our school</a></li>
+                <li><a href="#contacts">Contacts</a></li>
+            </ul>
+        </header>
+    </div>
+
+    <main class="main-content">
+        <section class="hero-banner">
+            <div class="hero-content">
+                <h1>The knowledge is what transform ourself.</h1>
+                <a href="" class="cta" target="_blank">Know more</a>
+            </div>
+            <img src="../img/HeroImage.png" alt="Hero banner">
+        </section>
+
+        <section class="courses">
+            <h2>Main Courses</h2>
+            <div class="courses-cards">
+                <article class="course">
+                    <img src="../img/curso-design.png" alt="">
+                    <div class="course-content">
+                        <h3>Web design</h3>
+                        <p>
+                            The Web Design course is perfect for those
+                            who want to learn how to create attractive and
+                            functional for websites and mobile applications.
+                        </p>
+                    </div>
+                </article>
+
+                <article class="course">
+                    <img src="../img/curso-design-1.png" alt="">
+                    <div class="course-content">
+                        <h3>Back-end</h3>
+                        <p>
+                            With this course you will master a back-end language 
+                            of your choice, a database system and learn how the HTTP 
+                            protocol works in practice.
+                        </p>
+                    </div>
+                </article>
+
+                <article class="course">
+                    <img src="../img/curso-design-2.png" alt="">
+                    <div class="course-content">
+                        <h3>Front-end</h3>
+                        <p>
+                            Learn HTML, CSS and Javascript and create rich, 
+                            semantic interfaces for web pages, online applications 
+                            or even applications for mobile devices.
+                        </p>
+                    </div>
+                </article>
+            </div>
+            
+        </section>
+
+        <section class="ourschool dark-blue-container">
+            <img src="../img/nossa-escola.png" alt="Our school">
+            <div class="ourschool-content">
+                <h2>Our School</h2>
+                <p>
+                    Learn in-demand technology skills and
+                    achieve your career goals with our school
+                    online technology. We offer a wide range of online courses,
+                    from programming and software development to graphic design
+                    and data analysis. Our experienced instructors will provide the
+                    you an interactive and supportive learning environment to help you
+                    to acquire the skills necessary to be successful in your career.
+                    Sign up now and start your journey to becoming a professional
+                    successful technology company.
+                </p>    
+            </div>
+        </section>
+    
+        <section class="contacts container">
+            <h2>Contacts</h2>
+            <iframe class="contacts-frame" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d988.3758884419016!2d-37.98970413050768!3d-7.736288499517634!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x7a6f89009e1f8cd%3A0x23ff8fe32bc12c8b!2sR.%20Francisco%20Pedro%20da%20Silva%2C%20269%20-%20A%20Definir%2C%20Princesa%20Isabel%20-%20PB%2C%2058755-000!5e0!3m2!1spt-BR!2sbr!4v1714168716936!5m2!1spt-BR!2sbr"></iframe>
+            <div class="contacts-content-address">
+                <address>
+                    Av. da Liberdade, 1001<br>
+                    Tel.: +351 21 123 456<br>
+                    E-mail: contato@aprenser.com
+                </address>
+            </div>
+        </section>
+    </main>
+    <footer class="main-footer dark-gray-container">
+        Developed by <a href="https://github.com/dev-davisouza">Davi</a>
+    </footer>
+</body>
+</html>
