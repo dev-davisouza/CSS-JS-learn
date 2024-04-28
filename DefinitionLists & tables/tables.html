@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        /* Setting a new default value: */
+        table, tr, th, td {
+            border: 2px solid black;
+        }
+
+        /* Woking serious: */
+        .course-table {
+            width: 80%;
+            margin: auto;
+            background-color: beige;
+            border-collapse: collapse;
+        }
+
+        .course-table th {
+            background-color: #BFC361;
+            padding: 16px;
+        }
+
+        .course-table td {
+            border: 2px solid black;
+            text-align: center;
+            padding: 10px;
+        }
+
+    </style>
+</head>
+<body>
+    <!--
+        The <table> tag in HTML is used to create a table, which is a grid of 
+        rows and columns used to display data in a structured format. Here's how it works:
+        
+        1. Table Structure: The <table> element defines the entire table. 
+            Inside the <table> element, you can have multiple other elements:
+
+            2. Table Row: Each row in the table is represented by the <tr> element. 
+                Inside a <tr>, you define the cells of the row.
+
+                    3. Table Header Cell: A header cell in a table is represented 
+                        by the <th> element. It is typically used to represent column or row headers. 
+                        Inside a <th>, you specify the header content.
+                    4. Table Data Cell: A data cell in a table is represented by the <td> element. 
+                        It contains the actual data to be displayed in the table. Inside a <td>, 
+                        you specify the cell content.
+
+    Like this below: 
+    -->
+    <table>
+        <tr>
+            <th>Column 1 Header</th>
+            <th>Column 2 Header</th>
+        </tr>
+        <tr>
+            <td>Row 1, Column 1</td>
+            <td>Row 1, Column 2</td>
+        </tr>
+        <tr>
+            <td>Row 2, Column 1</td>
+            <td>Row 2, Column 2</td>
+        </tr>
+    </table>
+
+    <!--
+        The <table> tag is little bit confuse, bu very useful. 
+            '<tr>' means: table row,
+            '<th>' means table header and 
+            '<td>' means table data.
+        Also, you can make that a <td> fill more than one cell, in other words, 
+        tou can make that a <td> occupy the space in more than one column with
+        the attr named 'colspan', like this:
+    -->
+    <table>
+        <tr>
+            <th>Column 1 Header</th>
+            <th>Column 2 Header</th>
+        </tr>
+        <tr>
+            <td colspan="2">Row 1, Column 1</td>
+    </table>
+
+    <!--
+        WIthout a border style you can't see it, you just know that this <td>
+        fills 2 cells.
+        Also, you can make that a <td> occupy two rows with the attr rowspan:
+    -->
+    <table>
+        <tr>
+            <th>Column 1 Header</th>
+            <th>Column 2 Header</th>
+        </tr>
+        <tr>
+            <td rowspan="2">Row 2, Column 1</td>
+            <td>Row 2, Column 2</td>
+        </tr>
+
+        <tr>
+            <td rowspan="2">Row 2, Column 2</td>
+            <td>Row 2, Column 3?</td>
+        </tr>
+    </table>
+
+    <!--
+        Moreover, tables has semantic as well as the all HTML by adding a division between 
+        head and body, in the table context it works like this:
+    -->
+    <table class="course-table">
+        <caption>Course price list</caption>
+        <!--
+            The <caption> element in HTML is used to provide a title or a brief explanation for a table. 
+            It is typically placed immediately after the opening <table> tag and before any <thead>, 
+            <tbody>, <tfoot>, or <tr> elements within the table. Here's why it's used:
+
+                1.Table Description: The <caption> element allows you to provide a clear and concise 
+                    description of the content or purpose of the table. This helps users, especially 
+                    those using screen readers or other assistive technologies, understand the context 
+                    and significance of the table.
+
+                2.Accessibility: Including a <caption> element improves accessibility by providing 
+                    additional information about the table's content. Screen reader users, for example, 
+                    can benefit from having a descriptive caption read aloud to them, enhancing their 
+                    understanding of the table.
+
+                3.Semantic Structure: By using the <caption> element, you are structuring your HTML 
+                    document in a semantically meaningful way. It separates the title or description 
+                    of the table from the actual table data, making the document easier to understand 
+                    for both humans and machines.
+        -->
+        <thead>
+            <tr>
+                <th>Occupation Area</th>
+                <th>Course</th>
+                <th>Investment</th>
+            </tr>
+        </thead>
+
+        <tbody>
+            <tr>
+                <td rowspan="3">Design</td>
+                <td>InDesign</td>
+                <td>R$ 1.000,00</td>
+            </tr>
+
+            <tr>
+                <td>Photoshop</td>
+                <td>R$ 1.000,00</td>
+            </tr>
+
+            <tr>
+                <td>Illustrator</td>
+                <td>R$ 1.000,00</td>
+            </tr>
+
+        
+            <tr>
+                <td rowspan="4">Development</td>
+                <td>HTML</td>
+                <td>R$ 1.000,00</td>
+            </tr>
+
+            <tr>
+                <td>CSS</td>
+                <td>R$ 1.000,00</td>
+            </tr>
+
+            <tr>
+
+                <td>Javascript</td>
+                <td>R$ 1.000,00</td>
+            </tr>
+
+            <tr>
+
+                <td>PHP</td>
+                <td>R$ 1.000,00</td>
+            </tr>
+        </tbody>
+        <tfoot>
+            <tr>
+                <td colspan="3">Prices subject to change without prior notice</td>
+            </tr>
+        </tfoot>
+    </table>
+</body>
+</html>
