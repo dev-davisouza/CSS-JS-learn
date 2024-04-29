@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <!--
+        Hey guys, it's me again. Today is cold (29-04-2024 at 10:32). 
+        Lets talk about forms semantic
+        
+        The <form> tag in HTML is used to create an interactive form for collecting user input. 
+        It's one of the fundamental elements for creating web forms, which are crucial for 
+        gathering information from users, such as login details, feedback, or survey responses. 
+        Here's an explanation of its semantics and usage:
+
+            Semantic Meaning: The <form> element represents a section of a document that contains 
+                interactive controls to submit data to a web server. It semantically groups together 
+                related form controls and labels, providing a structure that helps browsers and 
+                assistive technologies understand the purpose of the content.
+
+            Attributes: The <form> element can have various attributes that control its behavior and appearance. Common attributes include:
+                action: Specifies the URL where the form data should be submitted.
+                method: Defines the HTTP method (e.g., GET or POST) used to submit the form data.
+                enctype: Specifies how form data should be encoded before sending it to the server (e.g., application/x-www-form-urlencoded or multipart/form-data).
+                target: Specifies where to display the response received after submitting the form (e.g., _self, _blank, or a named iframe).
+
+            Form Controls: Inside the <form> element, you can include various form controls, such as 
+                text inputs, checkboxes, radio buttons, select menus, and buttons. These controls 
+                allow users to input data or make selections, which can then be submitted as part of 
+                the form.
+
+            Labeling: Each form control should ideally be associated with a <label> element using the 
+                for attribute. This association improves accessibility and usability by providing a 
+                clear label for each input field, making it easier for users to understand what 
+                information is expected.
+
+            Submission: When the user submits the form (e.g., by clicking a submit button), the browser 
+                collects the values entered into the form controls and sends them to the URL specified 
+                in the action attribute using the HTTP method specified in the method attribute.
+
+            Validation: HTML5 introduced built-in form validation features, allowing you to specify 
+                validation rules for form controls using attributes like required, pattern, min, and 
+                max. Additionally, JavaScript can be used for more complex validation logic.
+
+        Also, is very interesting the usage of the semantic inside the forms through <fieldsets> and
+        <legend> tags:
+
+            <form action="/submit-form" method="post">
+                <fieldset>
+                    <legend>login</legend>
+                    <label for="username">Username:</label>
+                    <input type="text" id="username" name="username" required>
+                    
+                    <label for="password">Password:</label>
+                    <input type="password" id="password" name="password" required>
+                </fieldset>
+                <button type="submit">Submit</button>
+            </form>
+        
+        Visually you can use h1, h2... to replace the <legend>, but for reasons of organization 
+        and semantics is not recommended, but at the same time is not wrong. Similarly, it's not 
+        wrong to not use the fieldsets, but for a better understanding of both the browser and 
+        the developer it's very recommended for better maintenance and readability. Normally we
+        learn to use forms just like this:
+
+            <form action="/submit-form" method="post">
+                <label for="username">Username:</label>
+                <input type="text" id="username" name="username" required>
+                
+                <label for="password">Password:</label>
+                <input type="password" id="password" name="password" required>
+                <button type="submit">Submit</button>
+            </form>
+
+        Again, this is not wrong, but the usage of semantic is professionally acceptable.
+    -->
+</body>
+</html>
