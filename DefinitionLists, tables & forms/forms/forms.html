@@ -1,0 +1,306 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Forms</title>
+    <style>
+        form {
+            margin-bottom: 5rem;
+        }
+        legend {
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body>
+    <!--
+        Hey guys, it's me again. Today is cold (29-04-2024 at 10:32). 
+        Lets talk about forms semantic :D
+        
+        The <form> tag in HTML is used to create an interactive form for collecting user input. 
+        It's one of the fundamental elements for creating web forms, which are crucial for 
+        gathering information from users, such as login details, feedback, or survey responses. 
+        Here's an explanation of its semantics and usage:
+
+            Semantic Meaning: The <form> element represents a section of a document that contains 
+                interactive controls to submit data to a web server. It semantically groups together 
+                related form controls and labels, providing a structure that helps browsers and 
+                assistive technologies understand the purpose of the content.
+
+            Attributes: The <form> element can have various attributes that control its behavior and 
+            appearance. Common attributes include:
+
+                action: Specifies the URL where the form data should be submitted.
+                method: Defines the HTTP method (e.g., GET or POST) used to submit the form data.
+                enctype: Specifies how form data should be encoded before sending it to the server 
+                    (e.g., application/x-www-form-urlencoded or multipart/form-data).
+                target: Specifies where to display the response received after submitting the form 
+                    (e.g., _self, _blank, or a named iframe).
+
+            Form Controls: Inside the <form> element, you can include various form controls, such as 
+                text inputs, checkboxes, radio buttons, select menus, and buttons. These controls 
+                allow users to input data or make selections, which can then be submitted as part of 
+                the form.
+
+            Labeling: Each form control should ideally be associated with a <label> element using the 
+                for attribute. This association improves accessibility and usability by providing a 
+                clear label for each input field, making it easier for users to understand what 
+                information is expected.
+
+            Submission: When the user submits the form (e.g., by clicking a submit button), the browser 
+                collects the values entered into the form controls and sends them to the URL specified 
+                in the action attribute using the HTTP method specified in the method attribute.
+
+            Validation: HTML5 introduced built-in form validation features, allowing you to specify 
+                validation rules for form controls using attributes like required, pattern, min, and 
+                max. Additionally, JavaScript can be used for more complex validation logic.
+
+        Also, is very interesting the usage of the semantic inside the forms through <fieldsets> and
+        <legend> tags:
+
+            <form action="/submit-form" method="post">
+                <fieldset>
+                    <legend>login</legend>
+                    <label for="username">Username:</label>
+                    <input type="text" id="username" name="username" required>
+                    
+                    <label for="password">Password:</label>
+                    <input type="password" id="password" name="password" required>
+                </fieldset>
+                <button type="submit">Submit</button>
+            </form>
+        
+        Visually you can use h1, h2... to replace the <legend>, but for reasons of organization 
+        and semantics is not recommended, but at the same time is not wrong. Similarly, it's not 
+        wrong to not use the fieldsets, but for a better understanding of both the browser and 
+        the developer it's very recommended for better maintenance and readability. Normally we
+        learn to use forms just like this:
+
+            <form action="/submit-form" method="post">
+                <label for="username">Username:</label>
+                <input type="text" id="username" name="username" required>
+                
+                <label for="password">Password:</label>
+                <input type="password" id="password" name="password" required>
+                <button type="submit">Submit</button>
+            </form>
+
+        Again, this is not wrong, but the usage of semantic is professionally acceptable.
+    -->
+    <form action="/submit-form" method="post">
+        <fieldset>
+            <legend>Common Login form</legend>
+            <label for="username">Username:</label>
+            <input type="text" id="username" name="username" required>
+            
+            <label for="password">Password:</label>
+            <input type="password" id="password" name="password" required>
+        </fieldset>
+        <button type="submit">Submit</button>
+    </form>
+
+    <!--
+        Input type datas (29-04-2024 at 18:23):
+        - text;
+        - password;
+        - checkbox;
+        - radio;
+        - file;
+        - hidden;
+        - submit;
+        - button;
+        - reset;
+        - email (HTML5);
+        - tel (HTML5);
+        - url (HTML5);
+        - search (HTML5);
+        - number (HTML5);
+        - range (HTML5);
+        - date (HTML5);
+        - time (HTML5);
+        - color (HTML5);
+    -->
+    <!--
+        The password input type in HTML is used to create a text field where users can enter passwords. 
+        Unlike regular text inputs, the characters entered in a password input are masked or hidden to 
+        protect the security of the password being entered. Here are some key points about the password 
+        input type:
+
+            1. Masked Input: When a user types into a password input field, the characters are 
+                typically displayed as asterisks (*) or dots (•) instead of the actual characters. 
+                This helps prevent shoulder surfing, where someone nearby may see the password being 
+                typed.
+
+            2. Security: The primary purpose of the password input type is to securely collect sensitive 
+                information, such as passwords, without revealing them to others. This helps protect user 
+                accounts and sensitive data from unauthorized access.
+
+            3. Form Submission: When a form containing a password input field is submitted, the value 
+                entered into the password field is sent to the server just like any other form data. 
+                However, it's important to note that the value is typically encrypted or hashed on the 
+                server side for added security.
+
+            4. Autocomplete: Browsers often offer autocomplete functionality for password input fields, 
+                allowing users to save and autofill their passwords for convenience. However, this 
+                feature should be used with caution, especially on shared or public devices, to avoid 
+                unauthorized access to user accounts.
+
+            5. Attributes: The password input type supports standard HTML attributes such as required, 
+                maxlength, and pattern, which can be used to specify validation rules or constraints for 
+                password input fields.
+    -->
+    <form action="/submit-form" method="post">
+        <fieldset>
+            <legend>Password type</legend>
+            <label for="password">Password:</label>
+            <input type="password" id="password" name="password" required>
+        </fieldset>
+        <button type="submit">Submit</button>
+    </form>
+
+    <!--
+        Checkboxes are a type of input control in HTML used to allow users to select one or more 
+        options from a list of choices. They are typically represented as small boxes that can be 
+        checked or unchecked by the user. Here are some key points about checkboxes:
+
+            1. Selection: Checkboxes allow users to select multiple options from a list by checking or 
+                unchecking the checkboxes associated with each option. Unlike radio buttons, checkboxes 
+                are not mutually exclusive, meaning users can select multiple options simultaneously.
+
+            2. HTML Element: In HTML, checkboxes are created using the <input> element with the 
+                type="checkbox" attribute. Each checkbox is associated with a specific value using the 
+                value attribute, which is sent to the server when the form containing the checkbox is 
+                submitted.
+
+            3. Labeling: To provide context and clarity to users, checkboxes are often accompanied by 
+                labels using the <label> element. The for attribute of the <label> element is set to 
+                the id of the associated checkbox, allowing users to click on the label to toggle the 
+                checkbox.
+
+            4. Checked State: Checkboxes can have an initial checked state by adding the checked 
+                attribute to the <input> element. This means that the checkbox will be selected by 
+                default when the page loads, unless the user manually unchecks it.
+
+            5. Form Submission: When a form containing checkboxes is submitted, the values of all 
+                checked checkboxes are sent to the server as part of the form data. On the server side, 
+                the values can be processed and used to perform actions or make decisions based on the 
+                user's selections.
+
+            6. Styling: Checkboxes can be styled using CSS to match the design of the webpage. 
+                However, styling checkboxes can be challenging due to limited customization options 
+                across different browsers.
+
+        Here's an example of how to create checkboxes in HTML:
+    -->
+    <form>
+        <fieldset>
+            <legend>Checkbox type</legend>
+            <input type="checkbox" id="option1" name="option1" value="Option 1">
+            <label for="option1">Option 1</label><br>
+            
+            <input type="checkbox" id="option2" name="option2" value="Option 2" checked>
+            <label for="option2">Option 2 (checked by default)</label><br>
+            
+            <input type="checkbox" id="option3" name="option3" value="Option 3">
+            <label for="option3">Option 3</label><br>
+        </fieldset>
+    </form>
+
+    <!--
+        Radio buttons are another type of input control in HTML used to allow users to select one 
+        option from a list of choices. Unlike checkboxes, radio buttons are mutually exclusive, 
+        meaning that only one option can be selected at a time. When one radio button is selected, 
+        any previously selected radio button in the same group is automatically deselected. 
+        Here are some key points about radio buttons:
+
+            1. Selection: Radio buttons are used when users need to select exactly one option from a 
+                list of two or more mutually exclusive options. Once a radio button is selected, it 
+                cannot be unchecked directly; instead, selecting another radio button in the same group 
+                automatically deselects the previously selected one.
+
+            2. HTML Element: In HTML, radio buttons are created using the <input> element with the 
+                type="radio" attribute. Each radio button is associated with a specific value using 
+                the value attribute, which is sent to the server when the form containing the radio 
+                buttons is submitted.
+
+            3. Grouping: Radio buttons are grouped together using the name attribute, which specifies 
+                the name of the radio button group. Radio buttons with the same name attribute belong 
+                to the same group, and only one radio button within the group can be selected at a time.
+
+            4. Labeling: Similar to checkboxes, radio buttons are often accompanied by labels using the 
+                <label> element. The for attribute of the <label> element is set to the id of the 
+                associated radio button, allowing users to click on the label to select the radio button.
+
+            5. Form Submission: When a form containing radio buttons is submitted, the value of the 
+                selected radio button within the group is sent to the server as part of the form data. 
+                On the server side, the value can be processed and used to perform actions or make 
+                decisions based on the user's selection.
+
+            6. Styling: Radio buttons can be styled using CSS to match the design of the webpage. 
+                However, styling radio buttons can be challenging due to limited customization options 
+                across different browsers.
+
+        In this example above, three radio buttons are created, each with an associated label. 
+        All radio buttons belong to the same group (name="options"), and only one can be selected 
+        at a time. The second radio button is initially selected by default (checked attribute). 
+        When the form is submitted, the value of the selected radio button is sent to the server.
+    -->
+    <form>
+        <fieldset>
+            <legend>Radio type</legend>
+            <input type="radio" id="option1" name="options" value="Option 1">
+            <label for="option1">Option 1</label><br>
+            
+            <input type="radio" id="option2" name="options" value="Option 2" checked>
+            <label for="option2">Option 2 (selected by default)</label><br>
+            
+            <input type="radio" id="option3" name="options" value="Option 3">
+            <label for="option3">Option 3</label><br>
+        </fieldset>
+    </form>
+    
+    <!--
+        The file input type (<input type="file">) is an HTML element used to create a file upload 
+        control in web forms. It allows users to select one or more files from their device's 
+        filesystem and submit them to a web server for processing. Here are some key points about 
+        the file input type: 
+
+            1. Appearance: The file input element typically appears as a button or a text field with 
+                a "Browse" button next to it, depending on the browser and operating system. When 
+                clicked, it opens a file picker dialog where users can select files from their 
+                local storage.
+
+            2. Accept Attribute: The accept attribute can be added to specify the types of files that 
+                the input accepts. This can be a file extension (e.g., .jpg, .pdf) or a MIME type 
+                (e.g., image/*, application/pdf). However, it's important to note that the accept 
+                attribute is only a hint to the browser and does not prevent users from selecting 
+                files of other types.
+
+            3. Multiple Files: By adding the multiple attribute (<input type="file" multiple>), 
+                you can allow users to select multiple files at once. This creates a multi-file 
+                selection interface where users can choose multiple files using their operating 
+                system's file picker.
+
+            4. Form Submission: When the user selects one or more files and submits the form containing 
+                the file input, the selected files are included in the form data. The file data is 
+                typically sent as part of a multipart/form-data request to the server, along with any 
+                other form fields.
+
+            5. JavaScript Access: File input elements can be accessed and manipulated using JavaScript. 
+                You can use JavaScript to listen for file selection events, validate file types and 
+                sizes, and perform other actions based on user interaction with the file input.
+
+        Here's a basic example of how to use the file input type in an HTML form:
+    -->
+    <form action="/upload" method="post" enctype="multipart/form-data">
+        <fieldset>
+            <legend>File type</legend>
+            <label for="fileInput">Select a file:</label>
+            <input type="file" multiple id="fileInput" name="file">
+        </fieldset>
+        <button type="submit">Upload</button>
+    </form>
+
+</body>
+</html>

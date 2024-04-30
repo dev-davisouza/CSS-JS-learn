@@ -1,0 +1,46 @@
+:root {
+    --cool-gray: #95A5A6;
+    --pale-gray: #EBF0F1;
+}
+
+html,
+body {
+    margin: 0;
+    padding: 0;
+    background-color: var(--cool-gray);
+    text-align: center;
+}
+
+fieldset {
+    border: none;
+    display: flex; 
+    flex-direction: column;
+    text-align: left;
+}
+
+legend {
+    width: 100%;
+    font-weight: 600;
+    margin-bottom: 1rem;
+    text-align: center;
+}
+
+input {
+    padding: 0.6rem;
+    border-radius: 6px;
+    margin-bottom: 1rem;
+}
+
+button {
+    width: 90%;
+    padding: 0.6rem;
+}
+
+.login-container {
+    width: 30%;
+    margin: auto;
+    background-color: var(--pale-gray);
+    padding: 2rem;
+    border-radius: 8px;
+    box-shadow: 2px 2px 8px black;
+}
