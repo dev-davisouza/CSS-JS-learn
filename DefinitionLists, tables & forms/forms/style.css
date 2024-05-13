@@ -12,7 +12,7 @@ body {
 }
 
 fieldset {
-    border: none;
+    all: unset;
     display: flex; 
     flex-direction: column;
     text-align: left;
@@ -29,11 +29,16 @@ input {
     padding: 0.6rem;
     border-radius: 6px;
     margin-bottom: 1rem;
+    max-width: 100%;
 }
 
 button {
-    width: 90%;
+    display: block;
+    width: 45%;
     padding: 0.6rem;
+    background-color: var(--cool-gray);
+    border: 2px solid inherit;
+    border-radius: 4px;
 }
 
 .login-container {
@@ -43,4 +48,10 @@ button {
     padding: 2rem;
     border-radius: 8px;
     box-shadow: 2px 2px 8px black;
+}
+
+.buttons {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
 }
